@@ -32,3 +32,11 @@ function addTodo(){
     alert ('task cannot be empty')
   }
 }
+
+// fungsi buat menandai todo selesai
+function toggleComplete(index){
+  todos[index].completed = !todos[index].completed
+  renderTodos()
+}
+
+// fungsi buat hapus todo
