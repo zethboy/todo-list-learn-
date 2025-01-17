@@ -19,5 +19,16 @@ function renderTodos(){
         <button onclick = "deleteTodo(${index})">❌</button>
       </div>`
   })
+}
 
+// fungsi buat nambah todo
+function addTodo(){
+  const todoText = input.ariaValueMax.trim()
+  if (todoText !== ''){
+    todos.push({text : todoText, completed : false})
+    input.value = ''
+    renderTodos()
+  }else{
+    alert ('task cannot be empty')
+  }
 }
