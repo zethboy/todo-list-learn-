@@ -49,3 +49,4 @@ function deleteTodo(index){
 addButton.addEventListener('click', addTodo)
 
 // render awal (kosong)
+renderTodos()
