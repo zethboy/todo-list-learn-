@@ -40,3 +40,7 @@ function toggleComplete(index){
 }
 
 // fungsi buat hapus todo
+function deleteTodo(index){
+  todos.splice(index, 1)
+  renderTodos()
+}
