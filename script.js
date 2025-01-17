@@ -10,20 +10,21 @@ let todos = []
 function renderTodos(){
   todoList.innerHTML = '' //buat hapus elemen sebelumnya
   todos.forEach((todo, index)=> {
-    const li = document.querySelector('#li')
-    li.className = `todo-item ${todo.completed ? 'completed' : ''}`
+    const li = document.createElement('li')
+    li.className = `todo-item ${todo.completed? 'completed' : ''}`
     li.innerHTML=`
       <span>${todo.text}</span>
       <div>
         <button onclick = "toggleComplete(${index})">✔</button>
         <button onclick = "deleteTodo(${index})">❌</button>
       </div>`
+    todoList.appendChild(li)
   })
 }
 
 // fungsi buat nambah todo
 function addTodo(){
-  const todoText = input.ariaValueMax.trim()
+  const todoText = input.value.trim()
   if (todoText !== ''){
     todos.push({text : todoText, completed : false})
     input.value = ''
