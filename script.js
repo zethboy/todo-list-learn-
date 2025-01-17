@@ -44,3 +44,8 @@ function deleteTodo(index){
   todos.splice(index, 1)
   renderTodos()
 }
+
+// event listener buat tombol tambah
+addButton.addEventListener('click', addTodo)
+
+// render awal (kosong)
